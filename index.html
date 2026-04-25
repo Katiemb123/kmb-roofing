@@ -54,12 +54,12 @@
   }
   .hero-photo {
     position:absolute; top:0; right:0; bottom:0;
-    width:60%; object-fit:cover; object-position:center 75%;
-    opacity:0.55;
-    mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 20%, black 50%);
-    -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 20%, black 50%);
+    width:65%; object-fit:cover; object-position:center 72%;
+    opacity:0.85;
+    mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 15%, black 35%);
+    -webkit-mask-image:linear-gradient(to right, transparent 0%, rgba(0,0,0,0.4) 15%, black 35%);
   }
-  @media(max-width:768px){ .hero-photo{ width:100%; opacity:0.2; mask-image:linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 30%); } }
+  @media(max-width:768px){ .hero-photo{ width:100%; opacity:0.3; mask-image:linear-gradient(to bottom, transparent 0%, black 30%); -webkit-mask-image:linear-gradient(to bottom, transparent 0%, black 30%); } }
   .hero-border {
     position:absolute; top:24px; left:24px; right:24px; bottom:24px;
     border:1px solid rgba(200,131,106,0.2); pointer-events:none;
@@ -236,6 +236,13 @@
       <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Our Services</button>
     </div>
     <a href="tel:8707619715" class="hero-phone">📞 870-761-9715</a>
+    <div style="display:inline-flex;align-items:center;gap:1rem;margin-top:1.25rem;padding:0.75rem 1.25rem;border:1px solid rgba(200,131,106,0.35);background:rgba(200,131,106,0.07);">
+      <div style="font-family:'Playfair Display',serif;font-size:2rem;color:#c8836a;line-height:1;">7</div>
+      <div>
+        <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:#a8a870;font-weight:700;">Years of Experience</div>
+        <div style="font-size:0.8rem;color:#e8c4b6;margin-top:0.2rem;font-family:'Cormorant Garamond',serif;">in the roofing industry</div>
+      </div>
+    </div>
   </div>
 </section>
 
