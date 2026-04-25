@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KMB Roofing and Restoration | Central Arkansas</title>
+<meta name="description" content="KMB Roofing and Restoration — locally owned, woman owned. Serving Central Arkansas. Insurance claim specialists. Free inspections. Call 870-761-9715.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --espresso: #2a1f1a;
+    --espresso-light: #352820;
+    --espresso-mid: #3d2e27;
+    --copper: #c8836a;
+    --copper-light: #d9a090;
+    --copper-pale: #e8c4b6;
+    --gold: #8a8a5c;
+    --gold-light: #a8a870;
+    --cream: #f5ede6;
+    --text-light: #e8ddd8;
+    --border: rgba(200,131,106,0.35);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--espresso); color:var(--text-light); font-family:'Lato',sans-serif; }
+  a { color:inherit; text-decoration:none; }
+
+  /* NAV */
+  nav {
+    position:fixed; top:0; width:100%; z-index:100;
+    background:rgba(42,31,26,0.97);
+    border-bottom:1px solid var(--border);
+    padding:0 2rem;
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .nav-logo { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--copper); letter-spacing:0.08em; }
+  .nav-logo span { color:var(--gold-light); font-size:0.7rem; display:block; letter-spacing:0.2em; font-family:'Lato',sans-serif; font-weight:300; }
+  .nav-links { display:flex; gap:2rem; list-style:none; }
+  .nav-links a { color:var(--text-light); font-size:0.8rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:300; transition:color 0.2s; }
+  .nav-links a:hover { color:var(--copper); }
+  .nav-cta { background:var(--copper); color:var(--espresso); border:none; padding:0.5rem 1.25rem; font-family:'Lato',sans-serif; font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:700; cursor:pointer; transition:background 0.2s; }
+  .nav-cta:hover { background:var(--copper-light); }
+
+  /* HERO */
+  .hero {
+    min-height:100vh;
+    background:radial-gradient(ellipse at 60% 40%, #3d2a22 0%, var(--espresso) 70%);
+    display:flex; align-items:center;
+    padding:100px 3rem 3rem;
+    position:relative; overflow:hidden;
+  }
+  .hero-border {
+    position:absolute; top:24px; left:24px; right:24px; bottom:24px;
+    border:1px solid rgba(200,131,106,0.2); pointer-events:none;
+  }
+  .hero-corner { position:absolute; width:24px; height:24px; border-color:var(--copper); border-style:solid; }
+  .tl { top:-1px; left:-1px; border-width:2px 0 0 2px; }
+  .tr { top:-1px; right:-1px; border-width:2px 2px 0 0; }
+  .bl { bottom:-1px; left:-1px; border-width:0 0 2px 2px; }
+  .br { bottom:-1px; right:-1px; border-width:0 2px 2px 0; }
+  .hero-content { max-width:680px; position:relative; z-index:1; }
+  .hero-badge {
+    display:inline-flex; align-items:center; gap:0.75rem;
+    font-size:0.7rem; letter-spacing:0.25em; text-transform:uppercase;
+    color:var(--gold-light); margin-bottom:1.5rem;
+  }
+  .hero-badge::before, .hero-badge::after { content:''; display:block; height:1px; width:40px; background:var(--gold); }
+  h1 { font-family:'Playfair Display',serif; font-size:clamp(3rem,8vw,5.5rem); font-weight:700; line-height:1.0; color:var(--copper); margin-bottom:0.25rem; }
+  h1 em { color:var(--gold-light); font-style:normal; }
+  .hero-sub { font-family:'Cormorant Garamond',serif; font-size:1.5rem; color:var(--copper-pale); margin-bottom:1.5rem; letter-spacing:0.05em; }
+  .hero-taglines { display:flex; gap:2rem; margin-bottom:2rem; flex-wrap:wrap; }
+  .hero-tagline { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); }
+  .hero-tagline::before { content:'◆ '; color:var(--copper); font-size:0.5rem; }
+  .hero-desc { font-size:1rem; color:var(--copper-pale); line-height:1.8; margin-bottom:2.5rem; max-width:500px; font-weight:300; }
+  .hero-actions { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem; }
+  .btn-primary { background:var(--copper); color:var(--espresso); border:none; padding:0.85rem 2rem; font-family:'Lato',sans-serif; font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:700; cursor:pointer; transition:background 0.2s; }
+  .btn-primary:hover { background:var(--copper-light); }
+  .btn-outline { background:transparent; color:var(--copper); border:1px solid var(--border); padding:0.85rem 2rem; font-family:'Lato',sans-serif; font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:700; cursor:pointer; transition:all 0.2s; }
+  .btn-outline:hover { border-color:var(--copper); background:rgba(200,131,106,0.08); }
+  .hero-phone { font-family:'Cormorant Garamond',serif; color:var(--gold-light); font-size:1.1rem; }
+
+  /* TRUST BAR */
+  .trust-bar {
+    background:var(--espresso-mid);
+    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+    padding:1.25rem 3rem;
+    display:flex; justify-content:center; align-items:center; gap:2.5rem; flex-wrap:wrap;
+  }
+  .trust-item { display:flex; align-items:center; gap:0.5rem; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); font-weight:700; }
+  .trust-dot { width:6px; height:6px; background:var(--copper); border-radius:50%; }
+
+  /* SECTIONS */
+  section { padding:6rem 3rem; }
+  .section-label { font-size:0.65rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--copper); margin-bottom:1rem; }
+  .section-title { font-family:'Playfair Display',serif; font-size:clamp(2rem,5vw,3rem); color:var(--copper); line-height:1.2; margin-bottom:1rem; }
+  .section-sub { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--copper-pale); max-width:560px; line-height:1.8; margin-bottom:3rem; }
+
+  /* SERVICES */
+  .services-bg { background:var(--espresso-light); }
+  .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px; }
+  .service-card { background:var(--espresso-mid); padding:2rem; border:1px solid rgba(200,131,106,0.15); transition:border-color 0.3s; }
+  .service-card:hover { border-color:var(--border); }
+  .service-icon { font-size:1.5rem; margin-bottom:1rem; }
+  .service-title { font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--copper); margin-bottom:0.5rem; }
+  .service-desc { font-size:0.85rem; color:var(--text-light); line-height:1.7; font-weight:300; opacity:0.85; }
+
+  /* ABOUT */
+  .about-grid { display:grid; grid-template-columns:1fr 1.2fr; gap:5rem; align-items:center; }
+  .about-img { border:1px solid var(--border); padding:1rem; }
+  .about-placeholder { background:var(--espresso-mid); aspect-ratio:3/4; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; }
+  .about-initials { width:80px; height:80px; border-radius:50%; border:2px solid var(--copper); display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:2rem; color:var(--copper); }
+  .about-name { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--copper); }
+  .about-role { font-size:0.8rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); }
+  .about-photo-hint { font-size:0.75rem; color:var(--gold); text-align:center; padding:0 2rem; }
+  .stats { display:flex; gap:3rem; margin:2rem 0; flex-wrap:wrap; }
+  .stat-num { font-family:'Playfair Display',serif; font-size:2.5rem; color:var(--copper); line-height:1; }
+  .stat-label { font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold-light); margin-top:0.25rem; }
+  .contact-list { display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem; }
+  .contact-row { display:flex; align-items:center; gap:0.75rem; font-size:0.9rem; color:var(--copper-pale); }
+
+  /* GALLERY */
+  .gallery-bg { background:var(--espresso-light); }
+  .gallery-note { background:rgba(200,131,106,0.08); border:1px dashed var(--border); padding:2rem; text-align:center; color:var(--copper-pale); font-family:'Cormorant Garamond',serif; font-size:1.1rem; margin-bottom:2rem; }
+  .gallery-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:8px; }
+  .gallery-card { background:var(--espresso-mid); border:1px solid rgba(200,131,106,0.15); aspect-ratio:4/3; display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; overflow:hidden; transition:border-color 0.3s; }
+  .gallery-card:hover { border-color:var(--copper); }
+  .gallery-icon { font-size:2rem; opacity:0.25; }
+  .gallery-badge { position:absolute; top:0.5rem; left:0.5rem; font-size:0.6rem; letter-spacing:0.15em; text-transform:uppercase; padding:0.25rem 0.6rem; font-weight:700; color:var(--espresso); }
+  .badge-before { background:var(--gold); }
+  .badge-after { background:var(--copper); }
+  .gallery-label { position:absolute; bottom:0; left:0; right:0; background:rgba(42,31,26,0.92); padding:0.75rem; font-family:'Cormorant Garamond',serif; color:var(--copper-pale); font-size:0.85rem; }
+
+  /* REVIEWS */
+  .reviews-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.5rem; }
+  .review-card { background:var(--espresso-mid); border:1px solid rgba(200,131,106,0.15); padding:2rem; }
+  .review-stars { color:var(--copper); font-size:0.85rem; letter-spacing:0.1em; margin-bottom:1rem; }
+  .review-text { font-family:'Cormorant Garamond',serif; font-size:1.05rem; line-height:1.8; color:var(--cream); margin-bottom:1.5rem; font-style:italic; }
+  .review-divider { width:30px; height:1px; background:var(--border); margin-bottom:0.5rem; }
+  .review-author { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-light); }
+
+  /* CONTACT */
+  .contact-bg { background:var(--espresso-light); }
+  .contact-layout { display:grid; grid-template-columns:1fr 1.5fr; gap:5rem; }
+  .contact-detail-row { display:flex; gap:1rem; margin-bottom:2rem; align-items:flex-start; }
+  .contact-icon-box { width:40px; height:40px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:1rem; }
+  .detail-label { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.25rem; }
+  .detail-value { font-family:'Cormorant Garamond',serif; font-size:1.1rem; color:var(--copper-pale); }
+  .free-badge { display:inline-block; background:rgba(200,131,106,0.12); border:1px solid var(--border); color:var(--copper); font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; padding:0.5rem 1.25rem; font-weight:700; margin-top:1.5rem; }
+
+  /* FORM */
+  .form-group { margin-bottom:1.25rem; }
+  .form-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+  .form-label { font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); display:block; margin-bottom:0.5rem; }
+  .form-input { width:100%; background:var(--espresso-mid); border:1px solid rgba(200,131,106,0.2); color:var(--text-light); padding:0.75rem 1rem; font-family:'Lato',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s; }
+  .form-input:focus { border-color:var(--copper); }
+  .form-input::placeholder { color:rgba(232,221,216,0.3); }
+  textarea.form-input { min-height:130px; resize:vertical; }
+  .form-submit { width:100%; padding:1rem; background:var(--copper); color:var(--espresso); border:none; font-family:'Lato',sans-serif; font-size:0.8rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:700; cursor:pointer; transition:background 0.2s; }
+  .form-submit:hover { background:var(--copper-light); }
+  .form-success { margin-top:1rem; color:var(--gold-light); font-family:'Cormorant Garamond',serif; font-size:1rem; display:none; }
+  .form-error { margin-top:1rem; color:var(--copper); font-family:'Cormorant Garamond',serif; font-size:1rem; display:none; }
+
+  /* FOOTER */
+  footer { background:#1e1410; border-top:1px solid var(--border); padding:3rem; }
+  .footer-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:3rem; margin-bottom:2rem; }
+  .footer-name { font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--copper); }
+  .footer-sub { font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-top:0.25rem; }
+  .footer-tagline { font-family:'Cormorant Garamond',serif; font-size:0.95rem; color:var(--copper-pale); margin-top:1rem; line-height:1.6; font-style:italic; }
+  .footer-col-title { font-size:0.65rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--copper); margin-bottom:1rem; }
+  .footer-links { list-style:none; }
+  .footer-links li { margin-bottom:0.6rem; }
+  .footer-links a { color:var(--text-light); font-size:0.85rem; font-weight:300; transition:color 0.2s; }
+  .footer-links a:hover { color:var(--copper); }
+  .footer-bottom { border-top:1px solid rgba(200,131,106,0.1); padding-top:1.5rem; display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; font-size:0.75rem; color:var(--gold); font-weight:300; }
+  .licensed { font-size:0.7rem; letter-spacing:0.15em; color:var(--gold); text-transform:uppercase; margin-top:1.5rem; }
+
+  /* MOBILE */
+  @media (max-width:768px) {
+    .nav-links { display:none; }
+    .about-grid { grid-template-columns:1fr; gap:2.5rem; }
+    .contact-layout { grid-template-columns:1fr; gap:3rem; }
+    .form-row { grid-template-columns:1fr; }
+    section { padding:4rem 1.5rem; }
+    .trust-bar { padding:1.25rem 1.5rem; gap:1.5rem; }
+    nav { padding:0 1.25rem; }
+    .hero { padding:90px 1.5rem 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">KMB<span>Roofing &amp; Restoration</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Free Inspection</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-border">
+    <div class="hero-corner tl"></div>
+    <div class="hero-corner tr"></div>
+    <div class="hero-corner bl"></div>
+    <div class="hero-corner br"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">Central Arkansas</div>
+    <h1>KMB<em>.</em></h1>
+    <div class="hero-sub">Roofing &amp; Restoration</div>
+    <div class="hero-taglines">
+      <span class="hero-tagline">Quality You Can See</span>
+      <span class="hero-tagline">Protection You Can Trust</span>
+    </div>
+    <p class="hero-desc">Locally owned. Woman owned. Personally involved in every project — from inspection to completion.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get a Free Inspection</button>
+      <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Our Services</button>
+    </div>
+    <a href="tel:8707619715" class="hero-phone">📞 870-761-9715</a>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-dot"></div>Licensed</div>
+  <div class="trust-item"><div class="trust-dot"></div>Insured</div>
+  <div class="trust-item"><div class="trust-dot"></div>Bonded</div>
+  <div class="trust-item"><div class="trust-dot"></div>Insurance Claim Specialists</div>
+  <div class="trust-item"><div class="trust-dot"></div>Free Inspections</div>
+</div>
+
+<!-- SERVICES -->
+<section class="services-bg" id="services">
+  <div class="section-label">What We Do</div>
+  <h2 class="section-title">Roofing &amp; Restoration Services</h2>
+  <p class="section-sub">Every project gets Katie's personal attention — from the first inspection to the final nail. No surprises, no middlemen.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🛡️</div>
+      <div class="service-title">Insurance Claim Assistance</div>
+      <p class="service-desc">We work directly with your insurance company to maximize your claim and minimize your stress. Specialists in storm damage documentation.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏠</div>
+      <div class="service-title">Roof Replacements</div>
+      <p class="service-desc">Full residential and commercial roof replacements using premium materials built to withstand Arkansas weather year after year.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⛈️</div>
+      <div class="service-title">Storm Damage Restoration</div>
+      <p class="service-desc">Rapid response to hail, wind, and storm damage. We document everything for your insurance claim and restore your roof right.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <div class="service-title">Leak Detection &amp; Repairs</div>
+      <p class="service-desc">Pinpoint the source of any leak with precision diagnostics. We fix the problem — not just the symptom.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">☀️</div>
+      <div class="service-title">Skylights</div>
+      <p class="service-desc">Professional skylight installation and replacement. Bring natural light into your home with a leak-free, properly sealed fit.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔩</div>
+      <div class="service-title">Custom Flashing</div>
+      <p class="service-desc">Precision flashing around chimneys, vents, and valleys — the details that separate a good roof from a great one.</p>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">💧</div>
+      <div class="service-title">Gutter Replacement</div>
+      <p class="service-desc">Complete gutter installation and replacement. Protect your foundation with properly fitted, seamless gutters.</p>
+    </div>
+    <div class="service-card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:rgba(200,131,106,0.05);">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--copper);font-style:italic;margin-bottom:1rem;">Not sure what you need?</p>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request a Free Inspection</button>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img">
+      <div class="about-placeholder">
+        <div class="about-initials">KB</div>
+        <div class="about-name">Katie Burton</div>
+        <div class="about-role">Owner &amp; Operator</div>
+        <p class="about-photo-hint">📸 Replace with your photo</p>
+      </div>
+    </div>
+    <div>
+      <div class="section-label">About KMB</div>
+      <h2 class="section-title">Personally Involved in Every Project</h2>
+      <p class="section-sub">From inspection to completion.</p>
+      <p style="font-size:0.95rem;line-height:1.9;color:var(--text-light);font-weight:300;margin-bottom:1.5rem;">
+        I started KMB Roofing and Restoration because I believe homeowners deserve honesty, quality craftsmanship, and someone who shows up. As the owner, I'm personally involved in every job — you won't get a salesperson or a middleman, you get me.
+      </p>
+      <p style="font-size:0.95rem;line-height:1.9;color:var(--text-light);font-weight:300;margin-bottom:2rem;">
+        Serving Central Arkansas with integrity. Licensed, insured, and bonded so you can have total peace of mind from the first call to the final walkthrough.
+      </p>
+      <div class="stats">
+        <div><div class="stat-num">100%</div><div class="stat-label">Woman Owned</div></div>
+        <div><div class="stat-num">Free</div><div class="stat-label">Inspections</div></div>
+        <div><div class="stat-num">✓</div><div class="stat-label">Ins. Claim Specialist</div></div>
+      </div>
+      <div class="contact-list">
+        <a href="tel:8707619715" class="contact-row">📞 &nbsp;870-761-9715</a>
+        <a href="mailto:burtonkatie18@icloud.com" class="contact-row">✉️ &nbsp;burtonkatie18@icloud.com</a>
+        <div class="contact-row">📍 &nbsp;Serving Central Arkansas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-bg" id="gallery">
+  <div class="section-label">Our Work</div>
+  <h2 class="section-title">Before &amp; After Gallery</h2>
+  <div class="gallery-note">📷 Your project photos will live here — send them to Katie to get them added to the website</div>
+  <div class="gallery-grid">
+    <div class="gallery-card"><span class="gallery-icon">🏠</span><div class="gallery-badge badge-before">Before</div><div class="gallery-label">Storm Damage — Conway, AR</div></div>
+    <div class="gallery-card"><span class="gallery-icon">🏠</span><div class="gallery-badge badge-after">After</div><div class="gallery-label">Full Replacement — Conway, AR</div></div>
+    <div class="gallery-card"><span class="gallery-icon">🏠</span><div class="gallery-badge badge-before">Before</div><div class="gallery-label">Hail Damage — Little Rock, AR</div></div>
+    <div class="gallery-card"><span class="gallery-icon">🏠</span><div class="gallery-badge badge-after">After</div><div class="gallery-label">Restored — Little Rock, AR</div></div>
+    <div class="gallery-card"><span class="gallery-icon">🏠</span><div class="gallery-badge badge-before">Before</div><div class="gallery-label">Leak Repair — Cabot, AR</div></div>
+    <div class="gallery-card"><span class="gallery-icon">🏠</span><div class="gallery-badge badge-after">After</div><div class="gallery-label">Sealed &amp; Finished — Cabot, AR</div></div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="section-label">Testimonials</div>
+  <h2 class="section-title">What Customers Say</h2>
+  <p class="section-sub">Real reviews from real Central Arkansas homeowners.</p>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Katie was phenomenal from start to finish. She handled everything with my insurance and we had a brand new roof in no time. Honest, professional, and she genuinely cares."</p>
+      <div class="review-divider"></div>
+      <div class="review-author">Sarah M. — Conway, AR</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"After the hailstorm I was overwhelmed. Katie walked me through every step, dealt with the insurance adjuster, and the crew was spotless. Highly recommend KMB to anyone in the area."</p>
+      <div class="review-divider"></div>
+      <div class="review-author">Mike T. — Little Rock, AR</div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"As a woman homeowner I appreciated that Katie treated me with respect and explained everything clearly. No upselling, no games. Just quality work at a fair price."</p>
+      <div class="review-divider"></div>
+      <div class="review-author">Linda R. — Cabot, AR</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-bg" id="contact">
+  <div class="contact-layout">
+    <div>
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Request a Free Inspection</h2>
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--copper-pale);line-height:1.8;margin-bottom:2.5rem;">No pressure. No commitment. Just an honest assessment of your roof from someone who knows what they're doing.</p>
+      <div class="contact-detail-row">
+        <div class="contact-icon-box">📞</div>
+        <div><div class="detail-label">Phone</div><a href="tel:8707619715" class="detail-value">870-761-9715</a></div>
+      </div>
+      <div class="contact-detail-row">
+        <div class="contact-icon-box">✉️</div>
+        <div><div class="detail-label">Email</div><a href="mailto:burtonkatie18@icloud.com" class="detail-value">burtonkatie18@icloud.com</a></div>
+      </div>
+      <div class="contact-detail-row">
+        <div class="contact-icon-box">📍</div>
+        <div><div class="detail-label">Service Area</div><div class="detail-value">Central Arkansas</div></div>
+      </div>
+      <div class="contact-detail-row">
+        <div class="contact-icon-box">🌐</div>
+        <div><div class="detail-label">Website</div><div class="detail-value">kmbroofing.com</div></div>
+      </div>
+      <div class="free-badge">Free Inspections Available</div>
+    </div>
+
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <div class="form-row form-group">
+        <div>
+          <label class="form-label">First Name</label>
+          <input class="form-input" type="text" name="firstName" placeholder="Jane" required>
+        </div>
+        <div>
+          <label class="form-label">Last Name</label>
+          <input class="form-input" type="text" name="lastName" placeholder="Smith">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input class="form-input" type="tel" name="phone" placeholder="(870) 555-0100">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input class="form-input" type="email" name="email" placeholder="jane@example.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Service Needed</label>
+        <select class="form-input" name="service">
+          <option value="">Select a service...</option>
+          <option>Insurance Claim Assistance</option>
+          <option>Roof Replacement</option>
+          <option>Storm Damage Restoration</option>
+          <option>Leak Detection &amp; Repair</option>
+          <option>Skylight Installation</option>
+          <option>Custom Flashing</option>
+          <option>Gutter Replacement</option>
+          <option>Free Inspection / Not Sure</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-input" name="message" placeholder="Tell us a little about your situation..."></textarea>
+      </div>
+      <button type="submit" class="form-submit" id="submitBtn">Request My Free Inspection →</button>
+      <p class="form-success" id="formSuccess">✓ Thank you! Katie will be in touch with you soon.</p>
+      <p class="form-error" id="formError">Something went wrong — please call us directly at 870-761-9715.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-name">KMB</div>
+      <div class="footer-sub">Roofing &amp; Restoration</div>
+      <p class="footer-tagline">"Quality You Can See.<br>Protection You Can Trust."</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Insurance Claim Assistance</a></li>
+        <li><a href="#services">Roof Replacements</a></li>
+        <li><a href="#services">Storm Damage Restoration</a></li>
+        <li><a href="#services">Leak Detection &amp; Repairs</a></li>
+        <li><a href="#services">Skylights &amp; Flashing</a></li>
+        <li><a href="#services">Gutter Replacement</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:8707619715">870-761-9715</a></li>
+        <li><a href="mailto:burtonkatie18@icloud.com">burtonkatie18@icloud.com</a></li>
+        <li><span style="color:var(--text-light);font-size:0.85rem;font-weight:300;">Central Arkansas</span></li>
+        <li><span style="color:var(--text-light);font-size:0.85rem;font-weight:300;">kmbroofing.com</span></li>
+      </ul>
+      <div class="licensed">Licensed · Insured · Bonded</div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 KMB Roofing and Restoration. All rights reserved.</span>
+    <span>Locally owned. Woman owned.</span>
+  </div>
+</footer>
+
+<script>
+  function submitForm(e) {
+    e.preventDefault();
+    const form = e.target;
+    const firstName = form.firstName.value.trim();
+    const lastName = form.lastName.value.trim();
+    const phone = form.phone.value.trim();
+    const email = form.email.value.trim();
+    const service = form.service.value || 'Not specified';
+    const message = form.message.value.trim() || 'No message provided';
+
+    const subject = encodeURIComponent('New Quote Request from KMB Website — ' + firstName + ' ' + lastName);
+    const body = encodeURIComponent(
+      'NEW QUOTE REQUEST\n' +
+      '─────────────────────────\n' +
+      'Name:    ' + firstName + ' ' + lastName + '\n' +
+      'Phone:   ' + (phone || 'Not provided') + '\n' +
+      'Email:   ' + email + '\n' +
+      'Service: ' + service + '\n' +
+      '─────────────────────────\n' +
+      'Message:\n' + message + '\n' +
+      '─────────────────────────\n' +
+      'Sent from kmbroofing.com'
+    );
+
+    window.location.href = 'mailto:burtonkatie18@icloud.com?subject=' + subject + '&body=' + body;
+
+    document.getElementById('formSuccess').style.display = 'block';
+    document.getElementById('formError').style.display = 'none';
+    form.reset();
+  }
+</script>
+
+</body>
+</html>
